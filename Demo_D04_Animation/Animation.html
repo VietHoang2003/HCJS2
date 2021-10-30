@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        div{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border-radius: 50%;
+            box-shadow: burlywood 3px 3px 3px;
+            /*animation-name: vuong;
+            animation-duration: 4s;
+            animation-iteration-count: 3;
+            animation: alternate;*/
+
+            animation: vuong 4s linear infinite alternate ;
+        }
+        @keyframes vuong {
+            0%{background-color: blue; left: 0px; top: 0px;}
+            25%{background-color: chartreuse;left: 400px;top: 0px;}
+            50%{background-color: coral;left: 400px;top: 400px;}
+            75%{background-color: cadetblue;left: 0px;top: 400px;}
+            100%{background-color: darkblue;left: 0px;top: 0px;}
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Animation demo</h2>
+    <hr>
+    <div></div>
+</body>
+</html>
