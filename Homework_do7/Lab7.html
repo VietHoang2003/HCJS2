@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="../CSS/Page.css">
+    <link rel="stylesheet" href="../CSS/Forms.css">
+</head>
+<body>
+<form action="#" id="Signup">
+<fieldset>
+    <h2>Enter details of your account</h2>
+    <hr>
+    <div>
+    <label for="">Fistname</label>
+    <input type="text" name="Fist" id="Fist"
+    required placeholder="Nhap ho" autofocus>
+    </div>
+    <div>
+    <label for="">Lastname</label>
+    <input type="text" name="Last" id="Last"
+    required placeholder="Nhap ten">
+    </div>
+    <div>
+    <label for="">Email</label>
+    <input type="text" name="Email" id="Email"
+    required placeholder="Nhap Email"> 
+    </div>
+    <div>
+    <label for="">Age</label>
+    <input type="number" name="Age" id="Age" min="18" max="30">
+    </div>
+    <div>
+        <label for="">Are you employed</label>
+        <input type="radio" name="are you employed" id="are you employed_yes" value="yes"> Yes
+        <input type="radio" name="are you employed" id="are you employed_no" value="no">No
+    </div>
+</fieldset>
+<div>
+    <input type="submit" value="OK" id="ok">
+    <input type="reset" value="Cancel" id="cancel">
+</div>
+</form>
+</body>
+<script>
+    //lap trinh cho su kien bam nut submit cua form co id="form-login"
+    document.getElementById("Signup").onsubmit=function(){
+        //lay gia tri cua o nhap username co id="user"
+        var Fist = document.getElementById("Fist").value;
+        //lay gia tri cua o nhap password co id="pass"
+        var Last = document.getElementById("Last").value;
+        //lay gia tri cua ok có id="ok"
+        var OK = document.getElementById("ok").value;
+        //kiem tra username
+        if(Fist!="FPT"){
+            alert("Họ không đúng, vui lòng nhập lại !!!");
+        }
+        else{
+            alert("Chúc mừng !!!");
+        }
+                //kiem tra password
+                if(Last!="Aptech"){
+            alert("Tên không đúng ko, vui lòng nhập lại !!!");
+        }
+        else{
+            alert("Chúc mừng !!!");
+        }
+        //kiem tra ok
+        if(OK!="#"){
+            alert("Thành công !!!");
+        }
+    
+
+        if(OK!="#"){
+            alert("Thành công !!!");
+        }
+    
+    
+    }
+    
+    </script>
+</html>
