@@ -1,0 +1,46 @@
+header {
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(206, 194, 194);
+    text-shadow: black 2px 2px 2px;
+}
+a{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+}
+tvh{
+    padding: 0px 10px;
+}
+.color{
+    border: 3px 3px 3px 3px  orange;
+    box-shadow: 3px 3px 3px 3px  rgb(219, 214, 214);
+}
+.right{
+    float: left;
+    width: 25%;
+    padding: 3px;
+}
+.left{
+    float: left;
+    width: 71%;
+}
+.left img{
+    width: 100%;
+}
+.right img{
+    width: 100%;
+    display: block;
+}
+.clear{
+    clear: both;
+}
+.cllection{
+    width: 80%;
+    margin: 0 auto;
+}
+footer{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}

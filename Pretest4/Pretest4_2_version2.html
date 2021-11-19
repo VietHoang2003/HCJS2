@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRT4.2</title>
+    <style>
+        a{
+            text-decoration: none;
+            padding: 0px 10px;
+            font-weight: bold;
+        }
+        .form{
+            width: 40%;
+        }
+.border{
+    margin:auto;
+    border: 3px 3px 3px 3px solid rgb(243, 168, 7);
+    box-shadow: 1px 1px 1px 1px black;
+}
+.submit{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+.reset{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+h2{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+    text-shadow:  rgb(180, 177, 187) 2px 2px 2px;
+    padding-left: 3rem;
+}
+footer{
+    padding-top: 15px;
+    text-align: center;
+}
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px 5px;
+}
+    </style>
+</head>
+<body>
+   
+    <div class="border">
+    <header>
+        <p><img src="img/logo.jpg" alt=""> AMAZING BRIDGES</p>
+    </header>
+    <div class="link">
+        <a href="">HOME</a>
+        <a href="">WORLD BRIDES</a>
+        <a href="">TOP LONGEST</a>
+        <a href="">TOP HIGHEST</a>
+        <a href="">CONTACT</a>
+    </div>
+         <hr>
+        <h2>Contact us</h2>
+       <div class="form">
+              <form action="" id="form-dk">
+      <fieldset>
+        <legend>Your details:</legend>
+           <div class="form-group">
+               <label for="">Name</label>
+               <input type="text" name="name" id="name" placeholder="Nhap ten" required>
+           </div>
+           <div class="form-group">
+               <label for="">Email</label>
+               <input type="email" name="email" id="email" placeholder="Nhap email" required>
+           </div>
+        </fieldset>
+        <br>
+              <fieldset>
+                    <legend>Your Review:</legend>
+                <div class="form-group">
+                      <label for="">How did you hear about us?</label>
+                  <select name="hdy" id="hdy">
+                       <option value="">gg</option>
+                       <option value="">ft</option>
+                       <option value="">ft</option>
+                       <option value="">fg</option>
+                  </select>
+               </div>
+
+               <div class="form-group">
+                      <label for="">Would you visit again?</label>
+                       <input type="radio" name="yes" id="yes_m" checked>Yes
+                       <input type="radio" name="no" id="no_h">No
+                       <input type="radio" name="maybe" id="maybe_t">Maybe
+               </div>
+
+               <div class="form-group">
+                     <label for="">Comment:</label>
+                     <textarea name="cmt" id="cmt" cols="30" rows="10" readonly></textarea>
+               </div>
+               <div>
+                <input type="checkbox" name="cb" id="cb">Sign me up for email updates
+          </div>
+
+          <div class="form-group">
+                <button type="submit" class="submit">Submit review</button>
+                <button type="reset" class="reset">Reset</button>
+          </div>
+
+        
+        </fieldset>
+       </form>
+  
+
+<footer>Copyright C by team ABC</footer>
+
+        
+    </div>
+</div>
+
+</body>
+<script>
+document.getElementById("form-dk").onsubmit=function(e){
+   e.preventDefault();
+   var name=document.getElementById("name").value.trim();
+   var email=document.getElementById("email").value.trim();
+   var hyd=document.getElementById("hyd").seclect.trim();
+   var cmt=document.getElementById("cmt").value.trim();
+
+   var a=["Cảm ơn về bài đánh giá"]
+   a.push(`Name: ${name}`);
+   a.push(`Email: ${email}`);
+   a.push(`hyd: ${hyd}`);
+   a.push(`cmt: ${cmt}`);
+
+   r=/^[a-z A-Z]{6,20} $/;
+   if(r.test(name)== false){
+       alert("Ten sai, vui long nhap lai !!!");
+       document.getElementById("name").focus();
+       return;
+   }
+   var new_window=window.open();
+   new_window.document.write(a.join ("<br>"));
+   alert(a.join ("\n"));
+   document.getElementById("cmt").value=a.join("\n");
+}
+</script>
+</html>
