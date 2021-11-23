@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+         a{
+            text-decoration: none;
+            color: white;
+            padding: 30px 3rem;
+            font-weight: bold;
+        }
+        .link{
+            display: flex;
+            justify-content: center;
+        }
+        .register{
+            color: black;
+        }
+        header{
+            background-color: blue;
+        }
+        .div{
+            text-align: center;
+            background-color: blue;
+            color: white;
+        }
+        *{
+            background-color: blue;
+        }
+        input{
+            background-color: white;
+        }
+        button{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="link">
+            <img src="img/logo.png">
+            <a href="Index.html">Home</a>
+            <a href="">About</a>
+            <a href="">Features</a>
+            <a href="">Reviews</a>
+            <a href="">Paq</a>
+            <a href="" class="register">Register</a>
+        </div>
+    </header>
+    <form action="" id="form">
+    <div class="div">
+        <h2>Register Product</h2>
+        <div>
+            <label for="" ></label>
+            <input type="text" name="name" id="name" placeholder="Usename*" required>
+        </div>
+        <br>
+        <div>
+            <label for=""></label>
+            <input type="text" name="pass" id="pass" placeholder="Passwork*" required>
+        </div>
+        <br>
+        <div>
+            <label for=""></label>
+            <input type="text" name="repass" id="repass" placeholder="Retype Passwork*" required>
+        </div>
+        <br>
+        <div>
+            <label for=""></label>
+            <input type="text" name="first name" id="first name"  required placeholder="First Name*">
+        </div>
+        <br>
+        <div>
+            <label for=""></label>
+            <input type="text" name="last name" id="last name" placeholder="Last Name*" required>
+        </div>
+        <br>
+        <div>
+             <label for=""></label>
+             <input type="email" name="mail" id="mail" placeholder="Email*" required>
+        </div>
+        <br>
+        <div>
+            <label for=""></label>
+            <input type="tel" name="phone" id="phone" placeholder="Phone*" required>
+        </div>
+        <br>
+        <div>
+            <label for=""></label>
+            <input type="text" name="comment" id="comment" ;>
+        </div>
+        <br>
+        <div>
+            <label for="">choose colour</label>
+            <input type="radio" name="gender" id="gender_male"
+            value="male" > Black
+            <input type="radio" name="gender" id="gender_female"
+            value="female" checked> Pink
+            <input type="radio" name="gender" id="gender_other"
+            value="other"> Red
+        </div>
+        <br>
+        <div>
+            <button type="submit" class="submit">Regisgter</button>
+            <button type="reset" class="reset">Reset</button>
+        </div>
+
+
+          
+    </div>
+
+    </form>
+</body>
+<script>
+    document.getElementById("form").onsubmit = function(e){
+     e.preventDefault();
+
+     let pass=document.getElementById("pass").value;
+     let repass=document.getElementById("repass").value;
+
+     if(pass!=repass){
+         alert('Vui long nhap lai mat khau !');
+         document.getElementById("pass2").focus();
+         return;
+     }
+
+  
+    r=/^[a-z A-Z 0-9]{5,30}$/;
+     if(r.test(pass)==false){
+         alert("Mật khẩu không hợp lệ !");
+         document.getElementById("repass").focus();
+         return;
+     }
+     r=/^[0-9]{8,12}$/;
+     if(r.test(phone)==false){
+         alert("Sđt bạn vừa nhập không hợp lệ !");
+         document.getElementById("phone").focus();
+         return;
+     }
+ }
+
+</script>
+</html>
